@@ -56,3 +56,16 @@ If the `data` directory is in the same project directory, the script will automa
 The following steps are implemented in the script:
 1. Read in the raw data
 2. Attach the column names to the raw features
+3. Map the activity descriptions to the proper activity labels
+4. Tidy up the data.frames before merging
+      a. Add a actitity descriptions column
+      b. Add a subject id column
+      c. Remove all feature columns that don't include 'mean' or 'std' in their column name
+5. Merge training and test data sets
+6. Generate the tidy data output 
+      a. Grouped the merged data by subject and activity
+      b. Summarize the merged data using averages over all other features
+      c. Format the numbers to scientific notation
+7. Write the output to text
+
+For further details, read the comments in `run_analysis.R`.
