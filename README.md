@@ -50,3 +50,9 @@ Make sure to set your working directory to the project directory (or source the 
 ```
 
 If the `data` directory is in the same project directory, the script will automatically generate the tidy data table named `selected_feature_averages_by_subject_and_activity.txt` in the same project directory path as the R script. Please consult the `CodeBook.md` file for details about the tidy data table.
+
+### How the Script Works
+
+The following steps are implemented in the script:
+1. Read in the raw data
+2. Attach the column names to the raw features
