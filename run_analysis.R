@@ -23,7 +23,6 @@ tr_features <- tr_features[ , grep("[Mm]ean\\(|[Ss]td\\(", colnames(tr_features)
 ts_features <- ts_features[ , grep("[Mm]ean\\(|[Ss]td\\(", colnames(ts_features))] %>% 
         mutate(activityType := ts_labels) %>%
         mutate(subjectNumber := as.integer(ts_subjects[, 1]))
-format(tr_features[ , 1], scientific = TRUE, format = "e", digits = 1)
 m <- merge(tr_features, ts_features, all = TRUE)
 rm(ts_labels, ts_features, ts_subjects, tr_labels, tr_features, tr_subjects, var_names, obs_desc)
 out <- m %>% group_by(subjectNumber, activityType) %>% 
