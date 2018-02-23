@@ -82,4 +82,8 @@ No other data description is provided at this time.
 
 ### Transformations to Variables & Data
 
+- activityType : In the raw data directory, the file `activity_labels.txt` contains a mapping of integers and character strings describing the activity. In both `train` and `test` directories of the raw data, `y_train.txt` and `y_test.txt` are single integer vectors whose contents represent the activity type for each observation. In the final output, the activity integer vectors are mapped to their respective descriptions so that the activity types are more easily discerned.
 
+- subjectNumber: Since no string descriptions of the subjects are provided, the `subject_train.txt` and `subject_test.txt` data are left unchanged.
+
+- selected features: The raw data include 561 features per observation. Only those features whose column names contain the key phrases 'mean()' or 'std()' are analyzed. A strict interpretation of the assignment requirements implies that features like <featureName>-meanFreq()-X are excluded from analysis, despite having 'mean' in the column name.
