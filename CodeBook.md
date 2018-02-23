@@ -2,11 +2,14 @@
 
 ### Variable Descriptions
 
-The following variables are columns in the tidy data table: 
+The following variables are columns in the tidy data table. With the exception of `subjectNumber` and `activityType`, variables are averages of selected feature data by activity and subject. All variables ending in `_average` have been calculated using R's `mean` function.
 
 - subjectNumber : integer representing the test/training subject (ex. 1)
 - activityType : string representing the activity during which the other variables were captured (ex. "laying")
-- tBodyAcc-mean()-X_average : number representing
+
+The subsequent selected feature averages are numeric values represented in scientific notation (since the original feature data are in scientific notation). For more information on a specific variable name, please consult the codebook given in the source data set.
+
+- tBodyAcc-mean()-X_average 
 - tBodyAcc-mean()-Y_average
 - tBodyAcc-mean()-Z_average
 - tBodyAcc-std()-X_average
@@ -75,4 +78,8 @@ The following variables are columns in the tidy data table:
 
 ### Description of the Data
 
+No other data description is provided at this time.
+
 ### Transformations to Variables & Data
+
+
