@@ -24,6 +24,7 @@ initDataFrame <- function(file_path) {
 #### @args   df - data.frame representing the features
 ####         lbls - data.frame representing the labels
 ####         subjs - data.frame representing the subjects
+#### @return df - tidied data.frame
 tidyChain <- function(df, lbls, subjs) {
         df <- df[ , grep("[Mm]ean\\(|[Ss]td\\(", colnames(df))] %>% 
                 mutate(activityType := lbls) %>%
